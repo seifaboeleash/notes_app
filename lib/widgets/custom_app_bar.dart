@@ -8,14 +8,13 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        Text('Notes' , style: TextStyle(color: Colors.white , fontSize: 28),),
+        Text(
+          'Notes',
+          style: TextStyle(color: Colors.white, fontSize: 28),
+        ),
         Spacer(),
-
-         customSearchIcon()
+        customSearchIcon()
       ],
-      
     );
   }
 }
-
-
