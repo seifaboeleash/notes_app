@@ -29,14 +29,15 @@ class NoteItem extends StatelessWidget {
                 'Build your Career with Tharwat Samy',
                 style: TextStyle(
                   color: Colors.black45,
-                   fontSize: 20,),
+                   fontSize: 18,),
                    
               ),
             ),
             trailing: IconButton(
               onPressed: () {},
-              icon: const Icon(FontAwesomeIcons.trash),
+              icon: const Icon(FontAwesomeIcons.trash ),
               color: Colors.black,
+              iconSize: 30,
             ),
           ),
          const  Padding(
@@ -54,3 +55,5 @@ class NoteItem extends StatelessWidget {
     );
   }
 }
+
+
