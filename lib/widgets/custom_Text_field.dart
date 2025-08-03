@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/constants.dart';
 
 class CustomTextField extends StatelessWidget {
-   CustomTextField({  this.hint,this.maxLines });
+   CustomTextField({  required this.hint,this.maxLines });
   String? hint ;
   Function(String)?onSubmitted;
   int? maxLines ;
@@ -9,17 +10,17 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  TextField(
+      cursorColor: kPrimaryColor,
       maxLines: maxLines,
       onSubmitted: onSubmitted,
       decoration: InputDecoration(
         hintText:hint ,
         hintStyle:const  TextStyle(
-          color: Color(0xff62FcD7)
+          color: kPrimaryColor
         ),
         enabledBorder:  buildBorder(),
-        focusedBorder: buildBorder(Color(0xff62FcD7)),
+        focusedBorder: buildBorder(kPrimaryColor)),
        
-      ),
     );
   }
   OutlineInputBorder buildBorder([color]){
