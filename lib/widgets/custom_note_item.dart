@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:intl/intl.dart';
+import 'package:notes_app/constants.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/views/edit_note_view.dart';
 import 'package:notes_app/widgets/edit_note_view_body.dart';
@@ -7,6 +9,8 @@ import 'package:notes_app/widgets/edit_note_view_body.dart';
 class NoteItem extends StatelessWidget {
   const NoteItem({super.key, required this.note, });
   final NoteModel note;
+  
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -20,7 +24,7 @@ class NoteItem extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.only(top: 16 , bottom: 16),
         decoration: BoxDecoration(
-            color: Color(0xffFFCC80),
+            color: kPrimaryColor,
              borderRadius: BorderRadius.circular(16),
              ),
         child: Column(
