@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:intl/intl.dart';
 import 'package:notes_app/constants.dart';
 import 'package:notes_app/models/note_model.dart';
@@ -49,7 +50,10 @@ class NoteItem extends StatelessWidget {
                 ),
               ),
               trailing: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  note.delete();
+                  
+                },
                 icon: const Icon(FontAwesomeIcons.trash ),
                 color: Colors.black,
                 iconSize: 30,
