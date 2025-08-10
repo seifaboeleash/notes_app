@@ -52,13 +52,13 @@ class _AddFormState extends State<AddNoteForm> {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
                     var formattedDate =DateFormat.yMMMd().format(DateTime.now()).toString();
-                    var noterModel = NoteModel(
+                    var noteModel = NoteModel(
                         title: title!,
                         subTitle: subTitle!,
                         date:formattedDate,
                         color: kPrimaryColor.value,
                          );
-                    BlocProvider.of<AddNoteCubit>(context).addNote(noterModel);
+                    BlocProvider.of<AddNoteCubit>(context).addNote(noteModel);
                    
                     
                   } else {

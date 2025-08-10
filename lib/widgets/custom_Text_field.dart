@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:notes_app/constants.dart';
 
 class CustomTextField extends StatelessWidget {
-   CustomTextField({  required this.hint,this.maxLines ,this.onSaved });
+   CustomTextField({  required this.hint,this.maxLines ,this.onSaved,this.onChanged });
   String? hint ;
   void Function(String?)? onSaved ;
+  void Function(String)? onChanged;
   int? maxLines ;
   
   @override
@@ -20,6 +21,7 @@ class CustomTextField extends StatelessWidget {
       cursorColor: kPrimaryColor,
       maxLines: maxLines,
       onSaved: onSaved,
+      onChanged: onChanged,
       decoration: InputDecoration(
         hintText:hint ,
         hintStyle:const  TextStyle(
