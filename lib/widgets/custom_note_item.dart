@@ -27,9 +27,9 @@ class NoteItem extends StatelessWidget {
           }),);
       },
       child: Container(
-        padding: const EdgeInsets.only(top: 16 , bottom: 16),
+        padding:  EdgeInsets.only(top: 16 , bottom: 16),
         decoration: BoxDecoration(
-            color: kPrimaryColor,
+            color: Color(note.color),
              borderRadius: BorderRadius.circular(16),
              ),
         child: Column(

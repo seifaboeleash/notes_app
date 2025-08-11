@@ -19,6 +19,7 @@ class _AddFormState extends State<AddNoteForm> {
   final GlobalKey<FormState> formKey = GlobalKey();
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   String? title, subTitle;
+  int ?color;
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +62,8 @@ class _AddFormState extends State<AddNoteForm> {
                         title: title!,
                         subTitle: subTitle!,
                         date:formattedDate,
-                        color: kPrimaryColor.value,
+                        color: BlocProvider.of<AddNoteCubit>(context).color.value,
+                       
                          );
                     BlocProvider.of<AddNoteCubit>(context).addNote(noteModel);
                    
